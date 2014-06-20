@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My Generic App</string>
+    <string name="title_section1">Generic 1</string>
+    <string name="title_section2">Generic 2</string>
+    <string name="title_section3">Generic 3</string>
+
+</resources>

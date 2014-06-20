@@ -1,0 +1,50 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        applicationId "com.phunware.myapp"
+        minSdkVersion 10
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            debugg
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    productFlavors {
+        generic {
+            packageName "com.generic.app"
+            versionCode 13
+            versionName "1.0"
+        }
+
+        phunware {
+            packageName "com.phunware.app"
+            versionCode 33
+            versionName "2.0"
+        }
+    }
+
+    sourceSets{
+        generic {
+            res.srcDirs = ['src/main/custom/generic/res']
+        }
+        phunware {
+            res.srcDirs = ['src/main/custom/phunware/res']
+        }
+    }
+
+
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:+'
+    compile 'com.android.support:appcompat-v7:+'
+}
